@@ -1,4 +1,4 @@
-const btn = document.querySelector('.talk')
+const input = document.querySelector('.input')
 const content = document.querySelector('.content')
 
 function speak(text) {
@@ -34,7 +34,7 @@ recognition.onresult = (event) => {
     content.textContent = transcript
     takeCommand(transcript.toLowerCase())
 }
-btn.addEventListener('click',() => {
+input.addEventListener('click',() => {
     content.textContent = "Listening..."
     recognition.start()
 })
